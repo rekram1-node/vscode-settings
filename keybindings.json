@@ -1,4 +1,5 @@
 // Place your key bindings in this file to override the defaults
+// control + w => switch between windows
 [{
     "key": "cmd+j",
     "command": "workbench.action.terminal.focus"
