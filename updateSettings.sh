@@ -1,2 +1,2 @@
-cp ~/Library/Application\ Support/Code/User/settings.json settings.json
-cp ~/Library/Application\ Support/Code/User/keybindings.json keybindings.json 
+cp settings.json ~/Library/Application\ Support/Code/User/settings.json 
+cp keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
