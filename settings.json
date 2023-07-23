@@ -15,16 +15,48 @@
   "[python]": {
     "editor.formatOnType": true
   },
+  "vim.leader": "<space>",
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
+  // shift + cmd + e will toggle file tree focus
   "vim.insertModeKeyBindings": [
+    // Easy escape
+    {
+      "before": [ "j", "j" ],
+      "after": [ "<Esc>" ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    {
+      "before": [ "shift+tab" ],
+      "commands": [ "editor.action.outdentLines" ]
+    },
+    {
+      "before": [ "tab" ],
+      "commands": [ "editor.action.indentLines" ]
+    },
+    // Move selected lines while staying in visual mode
+    {
+      "before": [ "J" ],
+      "commands": [ "editor.action.moveLinesDownAction" ]
+    },
+    {
+      "before": [ "K" ],
+      "commands": [ "editor.action.moveLinesUpAction" ]
+    },
+    // toggle comment selection
+    {
+      "before": [ "leader", "c" ],
+      "commands": [ "editor.action.commentLine" ]
+    },
     {
       "before": [
-        "j",
-        "j"
+        "leader",
+        "leader"
       ],
       "after": [
         "<Esc>"
@@ -32,40 +64,53 @@
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+    // FILE TREE
     {
-      "before": [
-        "<leader>",
-        "d"
-      ],
-      "after": [
-        "d",
-        "d"
-      ]
+      // for some reason this doesn't seem to work...
+      "before": ["leader", "n", "e"],
+      "commands": ["workbench.explorer.fileView.focus"]
+    },
+
+    {
+      "before": [ "<leader>", "d" ],
+      "after": [ "d", "d" ]
     },
     {
-      "before": [
-        "<C-n>"
-      ],
-      "commands": [
-        ":nohl"
-      ]
+      "before": [ "<C-n>" ],
+      "commands": [ ":nohl" ]
     },
     {
-      "before": [
-        "K"
-      ],
-      "commands": [
-        "lineBreakInsert"
-      ],
+      "before": [ "K" ],
+      "commands": [ "lineBreakInsert" ],
       "silent": true
+    },
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
     }
   ],
-  "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-a>": false,
-    "<C-f>": false,
+    "<C-f>": false
   },
-  "editor.formatOnSave": true,
+  // "editor.formatOnSave": true,
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -73,5 +118,5 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/node_modules": true
-  },
+  }
 }
