@@ -29,6 +29,13 @@
       "after": [ "<Esc>" ]
     }
   ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // prevent delete from overwriting register
+    {
+      "before": ["d"],
+      "after": ["\"","_", "d"]
+    }
+  ],
   "vim.visualModeKeyBindings": [
     // Stay in visual mode while indenting
     {
@@ -61,6 +68,12 @@
       "after": [
         "<Esc>"
       ]
+    },
+    // prevent pasting from copying
+    // overwritten text to register
+    {
+      "before": ["p"],
+      "after":["P"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -87,6 +100,11 @@
       "before": [ "K" ],
       "commands": [ "lineBreakInsert" ],
       "silent": true
+    },
+    // prevent delete from overwriting register
+    {
+      "before": ["d"],
+      "after": ["\"","_", "d"]
     },
     // panes
     {
