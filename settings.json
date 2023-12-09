@@ -1,4 +1,6 @@
 {
+  // "workbench.editor.enablePreview": false,
+  // "window.openFoldersInNewWindow": "off",
   "workbench.colorTheme": "Default Dark+",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
