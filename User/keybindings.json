@@ -53,5 +53,11 @@
         "command": "deleteFile",
         "key": "d",
         "when": "filesExplorerFocus && !inputFocus"
+    },
+    // close a folder in side panel
+    {
+        "command": "list.collapse",
+        "key": "c",
+        "when": "filesExplorerFocus && !inputFocus"
     }
 ]
