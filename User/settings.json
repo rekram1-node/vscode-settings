@@ -124,6 +124,13 @@
     {
       "before": ["leader", "l"],
       "commands": ["workbench.action.focusRightGroup"]
+    },
+    // custom bindings
+    {
+      // gt -> go to definition
+      // gtd -> go to type definition
+      "before": ["g", "t", "d"],
+      "commands": ["editor.action.goToTypeDefinition"]
     }
   ],
   "vim.handleKeys": {
