@@ -59,5 +59,11 @@
         "command": "list.collapse",
         "key": "c",
         "when": "filesExplorerFocus && !inputFocus"
+    },
+    // cmd+r will show references for a piece of code
+    {
+        "command": "editor.action.goToReferences",
+        "key": "cmd+r",
+        "when": "editorTextFocus"
     }
 ]
