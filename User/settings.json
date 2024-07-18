@@ -131,7 +131,7 @@
       // gtd -> go to type definition
       "before": ["g", "t", "d"],
       "commands": ["editor.action.goToTypeDefinition"]
-    }
+    },
   ],
   "vim.handleKeys": {
     "<C-a>": false,
@@ -161,5 +161,7 @@
     "**/.DS_Store": true,
     "**/node_modules": true
   },
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "git.openRepositoryInParentFolders": "never",
+  "terminal.integrated.enableMultiLinePasteWarning": "never"
 }
