@@ -5,10 +5,12 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
+  "python.pythonPath": "C:\\Users\\aiden\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
   },
+  "python.defaultInterpreterPath": "C:\\Users\\aiden\\AppData\\Local\\Microsoft\\WindowsApps\\python3.9.exe",
   "security.workspace.trust.untrustedFiles": "open",
   "go.toolsManagement.autoUpdate": true,
   "files.autoSave": "onWindowChange",

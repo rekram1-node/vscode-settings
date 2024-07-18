@@ -1,0 +1,10 @@
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
+    - rg
+
+* [fzf](https://github.com/junegunn/fzf)
+    - fzf
+
+* [bat](https://github.com/sharkdp/bat)
+    - bat
+
+
