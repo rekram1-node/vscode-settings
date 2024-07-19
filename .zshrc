@@ -12,15 +12,15 @@ done
 ## This ensures vscode doesn't open multiple times
 alias code="open -b com.microsoft.VSCode"
 
-
 # $PATH Configs
 export PATH="${HOME}/bin:${PATH}"
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="${HOME}/.local/bin:$PATH"
 ## go specific path cfg
 export GOPATH="$HOME/go"
-export GOPRIVATE="github.com/rekram1-node"
 export PATH="$GOPATH/bin:$PATH"
+# GOPRIVATE is defined in .zshenv
 
 
 # Tooling configurations
@@ -44,7 +44,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
 
 # Everything below is zsh specific
 
